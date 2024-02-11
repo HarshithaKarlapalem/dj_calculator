@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    <h1>Welcome to the Calculator</h1>
+</center>
+<form action="calculate" method="POST">
+    {%csrf_token%}
+    <center>
+        <h3>Enter the first number</h3>
+    </center>
+    <center>
+        <input type="number" name="number1">
+    </center>
+    <center>
+        <input type="number" name="number2">
+    </center><br><br>
+    <center>
+        <button type="submit" name="add">+</button>
+        <button type="submit" name="subtract">-</button>
+        <button type="submit" name="multiply">X</button>
+        <button type="submit" name="divide">//</button>
+    </center>
+</form>
+{% endblock %}
